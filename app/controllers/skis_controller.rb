@@ -15,6 +15,12 @@ class SkisController < ApplicationController
   def show
     @ski = Ski.find(params[:id])
 
+    @image = Image.where(:ski_id => params[:id])
+
+    @inventory = Inventory.where(:ski_id => params[:id])
+
+    @store = Store.where(:ski_id => params[:id])
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @ski }
@@ -51,6 +57,8 @@ class SkisController < ApplicationController
         format.json { render json: @ski.errors, status: :unprocessable_entity }
       end
     end
+
+
   end
 
   # PUT /skis/1

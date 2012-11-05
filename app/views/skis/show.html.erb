@@ -41,9 +41,38 @@
 </p>
 
 <p>
-  <b>Store:</b>
-  <%= @ski.store_id %>
+  <b>Images:</b>
+  <ul>
+  <%  @image.each do |image| %>
+    <li><%= image_tag image.url %></li>
+  <% end %>
+  </ul>
 </p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Available At</th>
+      <th>Sizes</th>
+      <th>Total Price</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @store.each do |store| %>
+      <tr>
+        <td><%= store.name %></td>
+        <td>  <% store.inventories.each do |inventory_object| %>
+          <li>
+        <%= inventory_object.size_available %>
+          </li>
+          <% end %>
+          </td>
+        <td><%= store.inventories.first.price %> </td>
+      </tr>
+      <% end %>
+    </tbody>
+</table>
+
 
 
 <%= link_to 'Edit', edit_ski_path(@ski) %> |
