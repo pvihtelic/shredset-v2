@@ -1,0 +1,33 @@
+<h1>Listing specs</h1>
+
+<table>
+  <tr>
+    <th>Length</th>
+    <th>Turing radius</th>
+    <th>Tip width</th>
+    <th>Waist width</th>
+    <th>Tail width</th>
+    <th>Weight</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @specs.each do |spec| %>
+  <tr>
+    <td><%= spec.length %></td>
+    <td><%= spec.turing_radius %></td>
+    <td><%= spec.tip_width %></td>
+    <td><%= spec.waist_width %></td>
+    <td><%= spec.tail_width %></td>
+    <td><%= spec.weight %></td>
+    <td><%= link_to 'Show', spec %></td>
+    <td><%= link_to 'Edit', edit_spec_path(spec) %></td>
+    <td><%= link_to 'Destroy', spec, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Spec', new_spec_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Store:</b>
+  <%= @inventory.store_id %>
+</p>
+
+<p>
+  <b>Ski:</b>
+  <%= @inventory.ski_id %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @inventory.size_id %>
+</p>
+
+<p>
+  <b>Ski url:</b>
+  <%= @inventory.ski_url %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @inventory.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventories_path %>

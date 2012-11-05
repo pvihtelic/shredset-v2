@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  length: 1
+  turing_radius: 9.99
+  tip_width: 1
+  waist_width: 1
+  tail_width: 1
+  weight: 9.99
+
+two:
+  length: 1
+  turing_radius: 9.99
+  tip_width: 1
+  waist_width: 1
+  tail_width: 1
+  weight: 9.99
