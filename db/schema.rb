@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121105180656) do
+ActiveRecord::Schema.define(:version => 20121106164107) do
 
   create_table "images", :force => true do |t|
     t.string   "url"
@@ -39,20 +39,19 @@ ActiveRecord::Schema.define(:version => 20121105180656) do
     t.string   "name"
     t.string   "rocker_type"
     t.string   "ski_type"
-    t.integer  "store_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
 
   create_table "specs", :force => true do |t|
     t.integer  "length"
-    t.decimal  "turing_radius"
+    t.decimal  "turning_radius"
     t.integer  "tip_width"
     t.integer  "waist_width"
     t.integer  "tail_width"
     t.decimal  "weight"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
     t.integer  "ski_id"
   end
 
@@ -60,8 +59,9 @@ ActiveRecord::Schema.define(:version => 20121105180656) do
     t.string   "name"
     t.integer  "ski_id"
     t.string   "store_url"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "inventory_id"
   end
 
 end
