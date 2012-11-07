@@ -22,9 +22,9 @@ skis = [
 ]
 
 specs = [
-  { :length => 172, :tail_width => 120, :tip_width => 122, :turning_radius => 26.0, :waist_width => 112, :weight => 2100.0},
-  { :length => 180, :tail_width => 124, :tip_width => 126, :turning_radius => 27.0, :waist_width => 116, :weight => 2250.0},
-  { :length => 188, :tail_width => 128, :tip_width => 130, :turning_radius => 28.0, :waist_width => 118, :weight => 2400.0}
+  { :length => 172, :tail_width => 120, :tip_width => 122, :turning_radius => 26.0, :waist_width => 112, :tail_width => 116, :weight => 2100.0},
+  { :length => 180, :tail_width => 124, :tip_width => 126, :turning_radius => 27.0, :waist_width => 116, :tail_width => 118, :weight => 2250.0},
+  { :length => 188, :tail_width => 128, :tip_width => 130, :turning_radius => 28.0, :waist_width => 118, :tail_width => 120, :weight => 2400.0}
 ]
 
 stores = [
@@ -76,7 +76,7 @@ specs.each do |spec|
 		@ski_id = ski_object.id
 	end
 
-	Spec.create :length => spec[:length], :tip_width => spec[:tip_width], :turning_radius => spec[:turning_radius], :waist_width => spec[:waist_width], :weight => spec[:weight],:ski_id => @ski_id
+	Spec.create :length => spec[:length], :tip_width => spec[:tip_width], :turning_radius => spec[:turning_radius], :waist_width => spec[:waist_width], :tail_width => spec[:tail_width],:weight => spec[:weight],:ski_id => @ski_id
 
 end
 

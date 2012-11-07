@@ -21,6 +21,8 @@ class SkisController < ApplicationController
 
     @store = Store.where(:ski_id => params[:id])
 
+    @spec = Spec.where(:ski_id => params[:id])
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @ski }

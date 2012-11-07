@@ -1,14 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Shredsetv2</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "shredset" %></title>
+    <meta name="comparison shopping for skis" content="">
+    <meta name="team shredset" content="">
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top">
+      <nav class="navbar-inner">
+        <div class="container">
+        </div>
+      </nav>
+    </header>
+    
+          <%= yield %>
+            
+        </div>
+        <footer>
+        </footer>
+        </div>
+  </body>
 </html>
